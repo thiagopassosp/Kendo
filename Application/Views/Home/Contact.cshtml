@@ -1,0 +1,40 @@
+﻿<div class="title well well-lg">Relação de Pessoas</div>
+
+<div id="ListPessoas">
+    <div id="commands">
+        <button data-bind="click: Adicionar" class="k-button">Adicionar</button>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Primeiro Nome</th>
+                <th>Sobrenome</th>
+                <th>Nome Completo</th>
+                <th>Dt.Nascimento</th>
+                <th>Idade</th>
+                <th>Regra</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody data-bind="source: pessoas" data-template="TemplatePessoa"></tbody>
+    </table>
+</div>
+
+<script type="text/x-kendo-template" id="TemplatePessoa">
+    <tr class="success">
+        <td><input data-bind="value: primeiroNome" /></td>
+        <td><input data-bind="value: ultimoNome" /></td>
+        <td><span data-bind="text: fullName" /></td>
+        <td><input data-bind="value: dataNascimento" /></td>
+        <td><span data-bind="text: idade" /></td>
+        <td><select data-bind="source: roles, value: id" data-template="selectRoleTemplate"></select></td>
+
+        <td><button class="k-button" data-bind="click: delete">X</button></td>
+    </tr>
+</script>
+
+<script type="text/x-kendo-template" id="selectRoleTemplate">
+    <option data-bind="value: id, text: name" />
+</script>
+

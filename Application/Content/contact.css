@@ -1,0 +1,44 @@
+﻿.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#peopleList {
+    width: 475px;
+    margin-top: 5px;
+}
+
+#commands {    
+    background-color: #ffffff;
+}
+
+table {
+    width: 475px;
+}
+
+
+th {
+    width: 100px;
+    background-color: Gray;
+    color: White;
+    text-align: center;
+}
+
+th:last-child {
+    width: 30px;
+}
+
+td {
+    padding-left: 4px;
+    padding-top: 2px;
+    height: 15px;    
+}
+
+td input {
+    width: 100%;
+}
+
+td span {
+    width: 130px;
+}
+
